@@ -1,10 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { Formik, Field, ErrorMessage } from 'formik';
-import { addContact } from 'redux/Operations';
+import { addContact } from 'redux/contacts/operations';
 import { useSelector } from 'react-redux';
 import { FormikForm } from './index.styled';
-import { formValidationScheme } from 'helpers/FormValidation';
-import { selectContacts } from 'redux/Selectors';
+import { formValidationScheme } from 'helpers/formValidation';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export const ContactForm = () => {
   const dispatch = useDispatch();

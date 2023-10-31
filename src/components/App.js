@@ -1,15 +1,15 @@
 import { Suspense, lazy } from 'react';
 import { Route, Routes, Navigate } from 'react-router-dom';
-import { GlobalStyle } from 'helpers/GlobalStyle';
+import { GlobalStyle } from 'helpers/globalStyle';
 import { Layout } from 'components/Layout';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { useAuth } from 'hooks';
 
-const HomePage = lazy(() => import('pages/Home'));
-const LoginPage = lazy(() => import('pages/Login'));
-const RegisterPage = lazy(() => import('pages/Register'));
-const ContactsPage = lazy(() => import('pages/Contacts'));
+const HomePage = lazy(() => import('pages/HomePage'));
+const LoginPage = lazy(() => import('pages/LoginPage'));
+const RegisterPage = lazy(() => import('pages/RegisterPage'));
+const ContactsPage = lazy(() => import('pages/ContactsPage'));
 
 export const App = () => {
   const { isRefreshing } = useAuth();

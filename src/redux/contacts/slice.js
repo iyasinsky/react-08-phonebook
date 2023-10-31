@@ -1,5 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchContacts, addContact, deleteContact } from 'redux/Operations';
+import {
+  fetchContacts,
+  addContact,
+  deleteContact,
+} from 'redux/contacts/operations';
 
 const isPendingAction = action => action.type.endsWith('/pending');
 
