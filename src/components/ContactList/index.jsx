@@ -9,11 +9,11 @@ export const ContactsList = () => {
 
   return (
     <List>
-      {contacts.map(({ id, name, phone }) => {
+      {contacts.map(({ id, name, number }) => {
         return (
           <li key={id}>
             <span>{name}:</span>
-            <span>{phone}</span>
+            <span>{number}</span>
             <button onClick={() => dispatch(deleteContact(id))}>Delete</button>
           </li>
         );

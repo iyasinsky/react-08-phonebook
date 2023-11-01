@@ -25,7 +25,7 @@ export const ContactForm = () => {
     <div>
       <h1>Phonebook</h1>
       <Formik
-        initialValues={{ name: '', phone: '' }}
+        initialValues={{ name: '', number: '' }}
         validationSchema={formValidationScheme}
         onSubmit={(values, actions) => {
           contactHandler(values);
@@ -43,9 +43,9 @@ export const ContactForm = () => {
           <label>
             <div>
               <span>Phone</span>
-              <Field name="phone" placeholder="Enter UA phone number" />
+              <Field name="number" placeholder="Enter UA phone number" />
             </div>
-            <ErrorMessage name="phone" component="p" />
+            <ErrorMessage name="number" component="p" />
           </label>
           <button type="submit">Add new contact</button>
         </FormikForm>
